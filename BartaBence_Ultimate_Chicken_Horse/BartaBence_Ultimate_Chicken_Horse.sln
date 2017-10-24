@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BartaBence_Ultimate_Chicken_Horse", "Assembly-CSharp.csproj", "{9C16CBF9-573D-3F87-7A29-66B7455770EB}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BartaBence_Ultimate_Chicken_Horse", "BartaBence_Ultimate_Chicken_Horse.csproj", "{DD9F98A8-1980-91F5-4B72-C0B4F3DE0A53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C16CBF9-573D-3F87-7A29-66B7455770EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C16CBF9-573D-3F87-7A29-66B7455770EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C16CBF9-573D-3F87-7A29-66B7455770EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C16CBF9-573D-3F87-7A29-66B7455770EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9F98A8-1980-91F5-4B72-C0B4F3DE0A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9F98A8-1980-91F5-4B72-C0B4F3DE0A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9F98A8-1980-91F5-4B72-C0B4F3DE0A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9F98A8-1980-91F5-4B72-C0B4F3DE0A53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
