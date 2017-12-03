@@ -18,5 +18,19 @@ public class CatScore : MonoBehaviour {
 	void Update()
 	{
 		scoreText.text = "Cat's score: " + catScore;
+
+		if (catScore >= 2)
+		{
+
+			if (PlayerPrefs.GetInt("TwoScoreForCat") == 0)
+			{
+				PlayerPrefs.SetInt("TwoScoreForCat", 1);
+				Debug.Log("Two score reached for CAT!!!");
+			}
+			else
+			{
+				Debug.Log("Two score for CAT was already got! Nothing happens.");
+			}
+		}
 	}
 }

@@ -30,7 +30,16 @@ public class FireArrow : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		targetTime -= Time.deltaTime;
+		arrow.transform.rotation = gameObject.GetComponent<Transform>().rotation;
+
+		print(gameObject.GetComponent<Transform>().rotation);
+
+		foreach(GameObject arrow in arrowPool)
+		{
+			arrow.transform.rotation = gameObject.GetComponent<Transform>().rotation;
+		}
+
+			targetTime -= Time.deltaTime;
 
 		if (targetTime <= 0.0f)
 		{

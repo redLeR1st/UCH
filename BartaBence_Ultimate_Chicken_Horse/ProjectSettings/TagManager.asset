@@ -8,6 +8,7 @@ TagManager:
   - FirePoint
   - Death
   - Arrow
+  - BlackHole
   layers:
   - Default
   - TransparentFX

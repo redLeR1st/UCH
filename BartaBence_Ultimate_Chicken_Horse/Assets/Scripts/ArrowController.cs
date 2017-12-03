@@ -4,7 +4,7 @@ using System.Collections;
 public class ArrowController : MonoBehaviour
 {
 
-	private Transform firePoint;
+	public Transform firePoint;
 
 	public bool hasMaxDistance;
 	public float maxDistance;
@@ -15,7 +15,7 @@ public class ArrowController : MonoBehaviour
 
 	void Awake()
 	{
-		firePoint = GameObject.FindGameObjectWithTag("FirePoint").transform;
+		//firePoint = GameObject.FindGameObjectWithTag("FirePoint").transform;
 	}
 
 	void OnEnable()
@@ -26,6 +26,8 @@ public class ArrowController : MonoBehaviour
 
 	void Update()
 	{
+
+
 		if (hasMaxDistance)
 		{
 			distanceTraveled += transform.position.x;

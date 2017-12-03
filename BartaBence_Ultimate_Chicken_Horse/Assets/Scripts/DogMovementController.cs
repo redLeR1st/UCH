@@ -13,7 +13,7 @@ public class DogMovementController : MonoBehaviour
 	public Transform fallDeathCheck;
 	public Transform finishCheck;
 
-	public static bool facingRight = true;
+	public bool facingRight = true;
 
 	private GameObject gameManager;
 	private DogRespawnableController respawnController;
@@ -22,6 +22,8 @@ public class DogMovementController : MonoBehaviour
 
 	private Animator animationController;
 
+	private AudioManager audioManager;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -29,6 +31,13 @@ public class DogMovementController : MonoBehaviour
 		gameManager = GameObject.FindGameObjectWithTag("GameManager");
 		respawnController = gameManager.GetComponent<DogRespawnableController>();
 		animationController = gameObject.GetComponent<Animator>();
+
+		audioManager = AudioManager.instance;
+		if (audioManager == null)
+		{
+			Debug.LogError("No audiomanager found in Scene.");
+		}
+
 	}
 
 	// Update is called once per frame
@@ -47,7 +56,7 @@ public class DogMovementController : MonoBehaviour
 		}
 		else if (gameObject.transform.position.x >= finishCheck.position.x)
 		{
-			DogScore.dogScore++;
+			++DogScore.dogScore;			
 			respawnController.resetGame();
 		}
 
@@ -77,6 +86,7 @@ public class DogMovementController : MonoBehaviour
 			//Add vertical force to the character
 			rigidboy.velocity = new Vector2(0, jumpForce);
 			isGrounded = false;
+
 		}
 
 	}

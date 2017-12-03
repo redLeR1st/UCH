@@ -11,7 +11,7 @@ public class CatMovementController : MonoBehaviour {
 	public Transform fallDeathCheck;
 	public Transform finishCheck;
 
-	public static bool facingRight = true;
+	public bool facingRight = true;
 
 	private GameObject gameManager;
 	private CatRespawnableController respawnController;
