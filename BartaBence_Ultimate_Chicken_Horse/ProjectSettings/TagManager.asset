@@ -9,6 +9,8 @@ TagManager:
   - Death
   - Arrow
   - BlackHole
+  - Boomb
+  - Weapon
   layers:
   - Default
   - TransparentFX

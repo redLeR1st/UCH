@@ -6,7 +6,7 @@ public class WeaponSelect : MonoBehaviour {
 
 	float rotation = 0;
 
-	private bool weaponToPut = false;
+	public static bool weaponToPut = false;
 
 	private GameObject newWeapon = null;
 
@@ -14,17 +14,21 @@ public class WeaponSelect : MonoBehaviour {
 
 	public GameObject[] weapon;
 
+    public static float timeLeft = 30.0f;
 
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 
 	// Update is called once per frame
 	void Update() {
-		if (weaponToPut && !w_canvas.active) {
+
+        if (!weaponToPut) {
+            timeLeft -= Time.deltaTime;
+        }
+        if (weaponToPut && !w_canvas.active) {
 			Vector3 pos = Input.mousePosition;
 			pos.z = transform.position.z - Camera.main.transform.position.z;
 			newWeapon.transform.position = Camera.main.ScreenToWorldPoint(pos);
@@ -55,8 +59,9 @@ public class WeaponSelect : MonoBehaviour {
 		{
 			weaponToPut = false;
 			rotation = 0;
+            timeLeft = 0.5f;
 
-			print("click");
+            print("click");
 		}
 
 	}
@@ -81,10 +86,22 @@ public class WeaponSelect : MonoBehaviour {
 
 	}
 
+	public void weapon3Put()
+	{
+		putWeapon(weapon[3]);
 
-	/****************END WEAPON PUT FUNCTIONS***********************************/
+	}
 
-	private void putWeapon(GameObject putThis)
+    public void weapon4Put()
+    {
+        putWeapon(weapon[4]);
+
+    }
+
+
+    /****************END WEAPON PUT FUNCTIONS***********************************/
+
+    private void putWeapon(GameObject putThis)
 	{
 		if (putThis != null)
 		{
